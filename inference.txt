@@ -1,0 +1,44 @@
+Instruction Set:
+ * Equivalence [expr 1, expr 2, occurance # (left-to-right) to change]
+     - start with brute force checker: can later try CoC algorithm
+ * Intro T
+ * Direct Proof (nested sub-proof)
+ * MP [line 1, line 2]
+ * Intro A [line 1, line 2]
+ * Elim A (1 & 2) [line]
+ * Intro V [line, expr]
+ * Elim V [line 1, line 2]      OR Proof by Cases [line 1, line 2, line 3]
+     - latter needs P or Q, P -> R, Q -> R to infer R
+     - get the usual with P or Q, P -> P (excl mid), Q -> P (Intro V on neg Q)
+ * Intro Exists [line, var name]
+ * Elim Exists [line, var name] (declare with dep)
+ * Intro Forall [line 1, line 2] (must check deps)
+ * Elim Forall [line, var name (must exist)]
+ * Let [var name, is arbitrary]
+
+Expressions:
+ * Prop Variables (capital letter)
+ * Object Variables (lower-case letter)
+ * T and F
+ * parentheses
+ * Pred(x)
+ * neg
+ * and (left-associative)
+ * or (left-associative)
+ * implies (right-associative)
+ * exists
+ * forall
+
+Equivalences:
+ * identity (T / F)
+ * domination (T / F)
+ * idempotency (and / or)
+ * commutativity (and / or)
+ * associativity (and / or)
+ * distributivity (and / or)
+ * absorption (and / or)
+ * negation (T / F)
+ * de Morgan (and / or)
+ * double negation
+ * law of implication
+ * contrapositive

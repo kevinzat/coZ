@@ -1,0 +1,21 @@
+TD.prop-elem { padding: 0 15px 0 10px; font-family: Lucida Grande, sans-serif; }
+TD.rule { padding: 0 15px 0 10px; font-family: Helvetica, sans-serif; }
+TD.prop-error { background-color: #FF7373; }
+
+SPAN.prop-fwd-match { border-bottom: 1px solid #e9c46a; }
+SPAN.prop-back-match { border-top: 1px solid #2a9d8f; }
+
+SPAN.dir-btns { margin-right: 10px; }
+BUTTON.dir-btn-on { color: black; }
+BUTTON.dir-btn-off { color: #909090; }
+BUTTON.dir-btn-off:hover { background-color: #c0c0c0; }
+BUTTON.dir-btn-off-fixed { color: #909090; }
+
+BUTTON.btn-edit { margin-left: 3px; border: none; color: #e0e0e0; }
+BUTTON.btn-edit:hover { color: #303030; }
+
+SPAN.options { margin-left: 5px; }
+BUTTON.btn-collapse { margin-left: 3px; border: none; color: #e0e0e0; }
+BUTTON.btn-collapse:hover { color: #303030; }
+BUTTON.btn-close { margin-left: 3px; border: none; color: #e0e0e0; }
+BUTTON.btn-close:hover { color: #303030; }
