@@ -632,6 +632,7 @@ export default class Proof
     let labels = this.state.labels;
 
     const prevProp = lines[index].prop;
+    const nextProp = (index+1 < lines.length) ? lines[index+1].prop : undefined;
 
     if (!line.isComplete()) {
       lines[index] = line;
@@ -725,7 +726,7 @@ export default class Proof
           lines[index] = line;
 
         // If the generated prop matches this line, then we can fill this as the
-        // exlpanation. However, we leave an existing explanation in place.
+        // explanation. However, we leave an existing explanation in place.
         } else if (line.prop.equals(newProp)) {
           if (line.genFrom === undefined)
             line.genFrom = line.prop;
@@ -748,8 +749,11 @@ export default class Proof
           // No more change-in-place for the old versions.
           ClearFrom(prevProp, lines);
 
-          // Reset the rule used on the next line if it's not from another line.
-          if (lines[index+1].genFrom === undefined) {
+          // Reset the rule used on the next line if it's not from a line other
+          // than the one right after this (which could only be backward).
+debugger;
+          if ((lines[index+1].genFrom === undefined) ||
+              (lines[index+1].genFrom === nextProp)) {
             lines[index+1] = new Line(lines[index+1].prop,
                 new Inference(infers.RULE_UNKNOWN, true),
                 lines[index+1].fixed, lines[index+1].editable);
